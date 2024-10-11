@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            //Car Car1 = new Car("CAR_001", "TOYOTA", "prius", 10);
-            //Console.WriteLine(Car1);
+            Car Car1 = new Car("CAR_001", "TOYOTA", "prius", 10);
+            Console.WriteLine(Car1);
 
 
             CarManager ObjCarManager = new CarManager();
@@ -66,6 +66,7 @@
 
                         Console.WriteLine("Enter the RentalPrice: ");
                         decimal RentalPrice = decimal.Parse(Console.ReadLine());
+                        ObjCarManager.ValidateCarRentalPrice(RentalPrice);
 
                         var NewCar = new Car(Carid, BrandName, ModelName, RentalPrice);
                         ObjCarManager.CreateCar(NewCar);
@@ -77,8 +78,22 @@
                         break;
 
                     case 3:
+                        //Console.WriteLine("Enter the Car ID : ");
+                        //string updateid = Console.ReadLine();
 
+                        //Console.WriteLine("Enter the BrandName : ");
+                        //string updatebrand = Console.ReadLine();
+
+                        //Console.WriteLine("Enter the ModelName : ");
+                        //string updatemodel = Console.ReadLine();
+
+                        //Console.WriteLine("Enter the RentalPrice: ");
+                        //decimal updatePrice = decimal.Parse(Console.ReadLine());
+
+                        //ObjCarManager.UpdateCar(updateid, updatebrand, updatemodel, updatePrice);
                         break;
+
+
 
                     case 4:
                         Console.WriteLine("Enter the deleted Car Id");
@@ -86,6 +101,10 @@
 
                         ObjCarManager.DeleteCar(DeleteId);
                         break;
+
+                    case 5:
+                        Console.WriteLine("Exit..");
+                         break;
 
                 }
 

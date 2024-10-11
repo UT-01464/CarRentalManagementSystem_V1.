@@ -43,25 +43,30 @@ namespace CarRentalManagementSystem_V1_
                            
         }
 
+        //public void UpdateCar(string newcarid, string newBrand, string newModel, decimal newrentalPrice)
+        //{
+        //    UpdateCar(newcarid, newBrand, newModel, newrentalPrice);
+        //}
+
 
         //update car
-        //public void UpdateCar(string newcarid , string newBrand , string newModel , decimal newrentalPrice)
-        //{
-        //    Car carObj = carObj;
+        public void UpdateCar(string newcarid, string newBrand, string newModel, decimal newrentalPrice, Car car)
+        {
+           
 
-        //    var FindId = carlist.Find(c=>c.carid==newcarid);
-        //    if (FindId != null)
-        //    {
-        //        carObj.carid = FindId.carid;
-        //        carObj.model = newModel;
-        //        carObj.brand = newBrand;
-        //        carObj.price = newrentalPrice;
+            var FindId = carlist.Find(c => c.carid == newcarid);
+            if (FindId != null)
+            {
+                car.carid = FindId.carid;
+                car.model = newModel;
+                car.brand = newBrand;
+                car.price = newrentalPrice;
 
-        //    }
-        //    Console.WriteLine("Car not found");
-              
+            }
+            Console.WriteLine("Car not found");
 
-        //}
+
+        }
 
 
 
@@ -73,18 +78,56 @@ namespace CarRentalManagementSystem_V1_
 
         // delete car
 
-        //public void DeleteCar(string carId)
+        public void DeleteCar(string carId)
+        {
+            string carid = null;
+            var Deleteid = carlist.Find(c => c.carid == carid);
+
+            if (Deleteid != null)
+            {
+                carlist.Remove(Deleteid);
+                Console.WriteLine("Car Deleted SuccessFully");
+            }
+            Console.WriteLine("Car Not Found");
+
+
+        }
+
+
+
+        //	ValidateCarRentalPrice  
+
+        //public decimal ValidateCarRentalPrice(decimal price)
         //{
-        //    string carid = null;
-        //    var Deleteid =carlist.Find(c=>c.carid==carid);
-
-        //    if (Deleteid != null)
+        //    do
         //    {
-        //        carlist.Remove(Deleteid);
-        //        Console.WriteLine("Car Deleted SuccessFully");
+        //        if (price <= 0)
+        //        {
+        //            Console.WriteLine("Price most be Positive");
+        //        }
         //    }
-        //    Console.WriteLine("Car Not Found");
+        //    while (price <= 0);
 
+        //    return price;
+
+        //}
+
+
+        //public decimal ValidateCarRentalPrice()
+        //{
+        //    decimal price;
+
+        //        if (price <= 0)
+        //        {
+        //            do
+        //            {
+        //                Console.WriteLine("input the value again");
+        //            }
+        //            while (price <= 0);
+
+        //        }
+           
+        //    return price;
 
         //}
 
@@ -93,11 +136,10 @@ namespace CarRentalManagementSystem_V1_
 
 
 
-  
 
-       
 
-        
+
+
 
 
 
