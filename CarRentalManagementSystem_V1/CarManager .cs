@@ -11,9 +11,15 @@ namespace CarRentalManagementSystem_V1_
     {
 
        List<Car> carlist= new List<Car>();
-      
 
-      // Create Car 
+        public string carid { get; private set; }
+
+        private string Brand;
+        private string Model;
+        private decimal rentalPrice;
+
+
+        // Create Car 
 
         public void CreateCar(Car car)
         {
@@ -37,18 +43,38 @@ namespace CarRentalManagementSystem_V1_
                            
         }
 
-        public void UpdateCar(string carid , string Brand , string Model , decimal rentalPrice)
+
+        //update car
+        public void UpdateCar(string newcarid , string newBrand , string newModel , decimal newrentalPrice)
         {
-            
-
-           
-
-
+            var FindId = carlist.Find(c=>c.carid==newcarid);
+            if (FindId != null)
+            {
+                carid = FindId.carid;
+                Brand = newBrand;
+                Model = newModel;
+                rentalPrice = newrentalPrice;
+            }
+            Console.WriteLine("Car not found");
+              
 
         }
 
+
+        // delete car
+
         public void DeleteCar(string carId)
         {
+            string carid = null;
+            var Deleteid =carlist.Find(c=>c.carid==carid);
+
+            if (Deleteid != null)
+            {
+                carlist.Remove(Deleteid);
+                Console.WriteLine("Car Deleted SuccessFully");
+            }
+            Console.WriteLine("Car Not Found");
+
 
         }
 

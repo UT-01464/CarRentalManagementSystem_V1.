@@ -8,6 +8,46 @@
             Console.WriteLine(Car1);
 
 
+            CarManager ObjCarManager = new CarManager();
+
+            ObjCarManager.CreateCar(new Car("100", "bmw", "Car", 200));
+            ObjCarManager.ReadCar();
+
+
+            Console.WriteLine("Car Id");
+            var Id = int.Parse(Console.ReadLine());
+
+
+            ObjCarManager.UpdateCar("200", "a", "A", 500);
+            ObjCarManager.ReadCar();
+
+
+            Console.WriteLine("CarId : ");
+            var Delete = Console.ReadLine();
+
+            ObjCarManager.DeleteCar(Delete);
+            ObjCarManager.ReadCar();
+           
+
+
+            Console.ReadLine();
+
+
+
+
+            //do
+            //{
+            //    Console.WriteLine("");
+            //    Console.WriteLine("");
+            //    Console.WriteLine("");
+            //    Console.WriteLine("");
+            //    Console.WriteLine("");
+            //    Console.WriteLine("");
+            //    Console.WriteLine("");
+            //}
+            //while (true);
+
+
 
 
 
