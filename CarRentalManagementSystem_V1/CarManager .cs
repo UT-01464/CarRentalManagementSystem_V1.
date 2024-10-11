@@ -45,38 +45,48 @@ namespace CarRentalManagementSystem_V1_
 
 
         //update car
-        public void UpdateCar(string newcarid , string newBrand , string newModel , decimal newrentalPrice)
-        {
-            var FindId = carlist.Find(c=>c.carid==newcarid);
-            if (FindId != null)
-            {
-                carid = FindId.carid;
-                Brand = newBrand;
-                Model = newModel;
-                rentalPrice = newrentalPrice;
-            }
-            Console.WriteLine("Car not found");
+        //public void UpdateCar(string newcarid , string newBrand , string newModel , decimal newrentalPrice)
+        //{
+        //    Car carObj = carObj;
+
+        //    var FindId = carlist.Find(c=>c.carid==newcarid);
+        //    if (FindId != null)
+        //    {
+        //        carObj.carid = FindId.carid;
+        //        carObj.model = newModel;
+        //        carObj.brand = newBrand;
+        //        carObj.price = newrentalPrice;
+
+        //    }
+        //    Console.WriteLine("Car not found");
               
 
-        }
+        //}
+
+
+
+
+
+
+
 
 
         // delete car
 
-        public void DeleteCar(string carId)
-        {
-            string carid = null;
-            var Deleteid =carlist.Find(c=>c.carid==carid);
+        //public void DeleteCar(string carId)
+        //{
+        //    string carid = null;
+        //    var Deleteid =carlist.Find(c=>c.carid==carid);
 
-            if (Deleteid != null)
-            {
-                carlist.Remove(Deleteid);
-                Console.WriteLine("Car Deleted SuccessFully");
-            }
-            Console.WriteLine("Car Not Found");
+        //    if (Deleteid != null)
+        //    {
+        //        carlist.Remove(Deleteid);
+        //        Console.WriteLine("Car Deleted SuccessFully");
+        //    }
+        //    Console.WriteLine("Car Not Found");
 
 
-        }
+        //}
 
 
 

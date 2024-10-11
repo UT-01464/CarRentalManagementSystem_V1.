@@ -8,12 +8,15 @@ namespace CarRentalManagementSystem_V1_
 {
     public class Car
     {
-        internal string carid;
 
         private string CarId { get; set; }
         private string Brand { get; set; }
         private string Model { get; set; }
         private decimal rentalprice { get; set; }
+
+
+        
+
 
         public Car(string carId, string brand, string model, decimal rentalprice)
         {
